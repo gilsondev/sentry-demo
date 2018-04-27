@@ -15,13 +15,11 @@ Slides: https://speakerdeck.com/gilsondev/como-monitorar-os-erros-da-sua-aplicac
 
 ```shell
 $ docker-compose -f sentry/docker-compose.yml up -d
+$ docker-compose -f sentry/docker-compose.yml exec sentry sentry upgrade
+$ docker-compose -f sentry/docker-compose.yml restart sentry
 ```
 
-* Inicie as outras VMs:
-
-```shell
-$ vagrant up django laravel springboot
-```
+Ao fazer o upgrade do sentry, no final ele vai solicitar a criação de uma conta. Siga as instruções no console e defina-o como superusuário.
 
 Para acessar o painel do sentry, acesse: `http://localhost:9000` e siga as instruções.
 
@@ -43,7 +41,15 @@ Com suas [respectivas DSNs](https://docs.sentry.io/quickstart/#configure-the-dsn
 * [Laravel](laravel/README.md)
 * [Spring Boot](spring-boot/README.md)
 
-Com tudo configurado é só acessar as aplicações:
+
+
+Inicie as outras VMs:
+
+```shell
+$ vagrant up django laravel springboot
+```
+
+Com tudo configurado e iniciado, é só acessar as aplicações:
 
 * Django: http://192.168.10.3:8000
 * Laravel: http://192.168.10.4:8000

@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
             export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
             cd /vagrant && ./mvnw package
-            SENTRY_DSN="http://4c408480ff8d4046ae912d28a6e00615:2d623daf1e2a4789994addbe3fe5c919@192.168.10.1:9000/3" java -jar target/sentry-spring-boot-example-0.0.1.jar &
+            SENTRY_DSN="http://c268d3e98b15450ab6b09e7a81629cc3:33c037252a1f47e29ca03e5bd29d64a8@192.168.10.1:9000/4" java -jar target/sentry-spring-boot-example-0.0.1.jar &
         SHELL
     end
 
