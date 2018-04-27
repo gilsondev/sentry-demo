@@ -35,7 +35,7 @@ Com o sentry preparado e com sua conta criada, vamos preparar as aplicações pa
 
   * Django
   * Laravel
-  * Spring Boot
+  * Java
 
 Com suas [respectivas DSNs](https://docs.sentry.io/quickstart/#configure-the-dsn), configure as aplicações de acordo com o README de cada projeto.
 
